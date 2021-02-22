@@ -8,7 +8,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (bing-dict unicode-escape baidu-translate))))
+ '(package-selected-packages (quote (company bing-dict unicode-escape baidu-translate))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,3 +33,6 @@
   (interactive)
   (bing-dict-brief (word-at-point)))
 (global-set-key (kbd "C-c w") 'bing-translate-selected-word)
+
+;;company-mode
+(add-hook 'after-init-hook 'global-company-mode)
