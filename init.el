@@ -8,10 +8,21 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (baidu-translate))))
+ '(package-selected-packages (quote (unicode-escape baidu-translate))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;;设置百度翻译插件
+(require 'baidu-translate)
+(global-set-key (kbd "C-c m") 'baidu-translate-zh-mark)
+(global-set-key (kbd "C-c M") 'baidu-translate-zh-whole-buffer)
+
+;;需要去百度申请API
+;;设置你的百度翻译APPID
+(setq baidu-translate-appid "20190721000319870")
+;;设置你的秘钥
+(setq baidu-translate-security "2tLWskfOWIyxSevGkU4L")
