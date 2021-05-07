@@ -8,13 +8,22 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company bing-dict unicode-escape baidu-translate))))
+ '(custom-enabled-themes (quote (atom-one-dark)))
+ '(custom-safe-themes
+   (quote
+    ("171d1ae90e46978eb9c342be6658d937a83aaa45997b1d7af7657546cae5985b" "5b7c31eb904d50c470ce264318f41b3bbc85545e4359e6b7d48ee88a892b1915" default)))
+ '(font-use-system-font nil)
+ '(package-selected-packages
+   (quote
+    (atom-one-dark-theme company bing-dict unicode-escape baidu-translate)))
+ '(scroll-bar-mode nil)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 143 :width normal)))))
 
 ;;设置百度翻译插件
 (require 'baidu-translate)
