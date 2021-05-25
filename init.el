@@ -3,12 +3,9 @@
 (setq package-archives '(("gnu"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
 			 ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 (package-initialize)
-;;自动更新软件包
+
 (unless package-archive-contents
   (package-refresh-contents))
-
-(package-install-selected-packages)
-
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -17,7 +14,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(tsdh-light))
  '(package-selected-packages
-   '(unicode-escape company bing-dict baidu-translate atom-one-dark-theme))
+   '(ctable deferred epc s all-the-icons unicode-escape company bing-dict baidu-translate atom-one-dark-theme))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -26,6 +23,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight normal :height 143 :width normal)))))
+
+;;自动更新软件包
+(package-install-selected-packages)
 
 ;;设置百度翻译插件
 (require 'baidu-translate)
@@ -47,3 +47,7 @@
 
 ;;company-mode
 (add-hook 'after-init-hook 'global-company-mode)
+
+;;eaf emacs application framework
+(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
+(require 'eaf)
