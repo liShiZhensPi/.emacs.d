@@ -3,19 +3,15 @@
 (setq package-archives '(("gnu"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
 			 ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 (package-initialize)
+     
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (atom-one-dark)))
- '(custom-safe-themes
-   (quote
-    ("171d1ae90e46978eb9c342be6658d937a83aaa45997b1d7af7657546cae5985b" "5b7c31eb904d50c470ce264318f41b3bbc85545e4359e6b7d48ee88a892b1915" default)))
- '(font-use-system-font nil)
+ '(custom-enabled-themes '(tsdh-light))
  '(package-selected-packages
-   (quote
-    (atom-one-dark-theme company bing-dict unicode-escape baidu-translate)))
+   '(unicode-escape company bing-dict baidu-translate atom-one-dark-theme))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -23,7 +19,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 143 :width normal)))))
+ '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight normal :height 143 :width normal)))))
 
 ;;设置百度翻译插件
 (require 'baidu-translate)
