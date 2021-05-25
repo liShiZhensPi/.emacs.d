@@ -4,17 +4,16 @@
 			 ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 (package-initialize)
 
-(unless package-archive-contents
-  (package-refresh-contents))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(tsdh-light))
+ '(custom-safe-themes
+   '("171d1ae90e46978eb9c342be6658d937a83aaa45997b1d7af7657546cae5985b" default))
  '(package-selected-packages
-   '(ctable deferred epc s all-the-icons unicode-escape company bing-dict baidu-translate atom-one-dark-theme))
+   '(doom-modeline ctable deferred epc s all-the-icons unicode-escape company bing-dict baidu-translate atom-one-dark-theme))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -25,6 +24,8 @@
  '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight normal :height 143 :width normal)))))
 
 ;;自动更新软件包
+(unless package-archive-contents
+  (package-refresh-contents))
 (package-install-selected-packages)
 
 ;;设置百度翻译插件
@@ -51,3 +52,9 @@
 ;;eaf emacs application framework
 (add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
 (require 'eaf)
+
+(require 'all-the-icons)
+
+(require 'doom-modeline)
+(doom-modeline-init)
+
