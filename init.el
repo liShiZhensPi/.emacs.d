@@ -14,21 +14,22 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(custom-enabled-themes '(tsdh-light))
+ '(custom-enabled-themes (quote (atom-one-dark)))
  '(custom-safe-themes
-   '("171d1ae90e46978eb9c342be6658d937a83aaa45997b1d7af7657546cae5985b" default))
+   (quote
+    ("171d1ae90e46978eb9c342be6658d937a83aaa45997b1d7af7657546cae5985b" default)))
  '(display-time-mode t)
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(racket-mode doom-modeline ctable deferred epc s all-the-icons unicode-escape company bing-dict baidu-translate atom-one-dark-theme))
- '(scroll-bar-mode nil)
- '(tool-bar-mode nil))
+   (quote
+    (racket-mode doom-modeline ctable deferred epc s all-the-icons unicode-escape company bing-dict baidu-translate atom-one-dark-theme)))
+ '(scroll-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight normal :height 143 :width normal)))))
+ '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight semi-bold :height 143 :width normal)))))
 
 ;;自动更新软件包
 ;; (unless package-archive-contents
@@ -60,10 +61,10 @@
 ;; (add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
 ;; (require 'eaf)
 
-(require 'all-the-icons)
+;;(require 'all-the-icons)
 
-(require 'doom-modeline)
-(doom-modeline-init)
+;;(require 'doom-modeline)
+;;(doom-modeline-init)
 
 ;;org-mode 解决中文换行问题
 (add-hook 'org-mode-hook
