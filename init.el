@@ -20,6 +20,7 @@
     ("171d1ae90e46978eb9c342be6658d937a83aaa45997b1d7af7657546cae5985b" default)))
  '(display-time-mode t)
  '(global-display-line-numbers-mode t)
+ '(org-babel-python-command "python3")
  '(package-selected-packages
    (quote
     (racket-mode doom-modeline ctable deferred epc s all-the-icons unicode-escape company bing-dict baidu-translate atom-one-dark-theme)))
@@ -69,3 +70,14 @@
 ;;org-mode 解决中文换行问题
 (add-hook 'org-mode-hook
 	  (lambda () (setq truncate-lines nil)))
+
+;; active Babel languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (ruby . t)
+   (ditaa . t)
+   (python . t)
+   (latex . t)
+   (plantuml . t)
+   (R . t)))
