@@ -30,14 +30,19 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight semi-bold :height 143 :width normal)))))
+ '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight semi-bold :height 128 :width normal)))))
 
-;;自动更新软件包
+;; 自动更新软件包
 ;; (unless package-archive-contents
 ;;   (package-refresh-contents))
 ;; (package-install-selected-packages)
 
-;;设置百度翻译插件
+
+;;基础设置
+(global-set-key (kbd "C-;") 'comment-line)
+
+
+;; 设置百度翻译插件
 (require 'baidu-translate)
 (global-set-key (kbd "C-c m") 'baidu-translate-zh-mark)
 (global-set-key (kbd "C-c M") 'baidu-translate-zh-whole-buffer)
